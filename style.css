@@ -6,20 +6,21 @@ body {
     padding: 0;
 }
 
+/* CONTAINER */
 .menu-container {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    /* ensures both sides match in height */
     flex-wrap: wrap;
     max-width: 1000px;
-    margin: auto;
+    margin: 20px auto;
     background-color: white;
     border: 3px solid #f9dcdc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /* LEFT SIDE - Photos */
@@ -27,10 +28,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* evenly spaces 3 images */
     gap: 10px;
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    box-sizing: border-box;
 }
 
 .menu-photo {
@@ -38,8 +39,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
-    height: 32%;
-    /* helps keep 3 balanced heights */
+    height: auto;
+    max-height: 250px;
 }
 
 /* RIGHT SIDE - Menu Content */
@@ -49,6 +50,7 @@ body {
     padding: 25px 30px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 h1 {
@@ -89,6 +91,7 @@ h1 {
     justify-content: space-between;
     padding: 6px 0;
     border-bottom: 1px dotted #eee;
+    flex-wrap: wrap;
 }
 
 .bundle {
@@ -124,16 +127,18 @@ h1 {
     font-weight: bold;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease;
+    display: inline-block;
 }
 
 .order-button a:hover {
     transform: scale(1.05);
 }
 
-/* 🌺 MOBILE RESPONSIVE */
-@media (max-width: 768px) {
+/* 🌺 MOBILE RESPONSIVE FIXES */
+@media (max-width: 900px) {
     .menu-container {
         flex-direction: column;
+        padding: 15px;
     }
 
     .menu-left {
@@ -143,16 +148,49 @@ h1 {
     }
 
     .menu-photo {
-        width: 45%;
+        width: 48%;
         height: auto;
+        max-height: 200px;
     }
 
     .menu-right {
+        padding: 20px;
         text-align: center;
+        margin-top: 20px;
     }
 
     .menu-list li {
         justify-content: center;
         gap: 10px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 🌸 SMALL PHONE SCREENS */
+@media (max-width: 480px) {
+    .menu-photo {
+        width: 100%;
+        max-height: 180px;
+    }
+
+    .menu-right {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .order-button a {
+        width: 90%;
+        font-size: 0.95rem;
     }
 }
