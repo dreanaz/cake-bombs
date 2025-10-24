@@ -35,10 +35,11 @@ body {
 
 .menu-photo {
     width: 100%;
-    height: 100%;
-    border-radius: 14px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    height: 32%;
+    /* helps keep 3 balanced heights */
 }
 
 /* RIGHT SIDE - Menu Content */
