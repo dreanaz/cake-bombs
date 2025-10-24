@@ -10,11 +10,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
+    /* ensures both sides match in height */
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    border: 3px solid #f9dcdc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
 }
 
 /* LEFT SIDE - Photos */
@@ -22,9 +27,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 15px;
+    /* evenly spaces 3 images */
+    gap: 10px;
     flex: 1;
-    max-width: 300px;
+    min-width: 300px;
 }
 
 .menu-photo {
